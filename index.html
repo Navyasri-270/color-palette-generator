@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Palette Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Font (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ✅ Navbar -->
+  <header class="navbar">
+    <div class="brand">PaletteGen</div>
+    <nav id="nav-links">
+      <a href="#generator">Generate</a>
+      <a href="#about">About</a>
+    </nav>
+    <button id="toggle" aria-label="Toggle navigation">&#9776;</button>
+  </header>
+
+  <!-- ✅ Section 1 – Generator -->
+  <section id="generator" class="section generator-section">
+    <h1>Create your next color palette</h1>
+    <p class="tagline">Click “Generate” to get five fresh colors. Tap a swatch to copy its HEX.</p>
+
+    <div id="palette" class="palette"></div>
+
+    <button id="generate-btn" class="btn-primary">Generate Palette</button>
+    <div id="toast" class="toast" role="alert" aria-live="polite"></div>
+  </section>
+
+  <!-- ✅ Section 2 – About / Instructions -->
+  <section id="about" class="section about-section">
+    <h2>How it works</h2>
+    <ol>
+      <li><strong>Generate :</strong> Press the big button (or hit the spacebar) for five random colors.</li>
+      <li><strong>Copy :</strong> Click any swatch; its HEX code is copied to your clipboard and confirmed by a toast.</li>
+      <li><strong>Tweak :</strong> Keep generating until the palette feels right—perfect for quick mock‑ups or style guides.</li>
+    </ol>
+    <h2>Tech stack</h2>
+    <ul>
+      <li>Semantic <strong>HTML5</strong></li>
+      <li>Vanilla <strong>CSS + flexbox</strong> (no framework, but ready for Tailwind/Bootstrap drop‑in)</li>
+      <li>Tiny <strong>JavaScript</strong> module for random color creation, copy‑to‑clipboard, smooth scrolling, and mobile nav toggle</li>
+    </ul>
+  </section>
+
+  <footer class="footer">Built with ❤️ by you • MIT License</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
